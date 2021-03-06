@@ -52,3 +52,9 @@ def buscar (datos,nombre):
         lista.append(datos.get("cines").get("yelmoalcorcon").get("direccion"))
         lista.append(datos.get("cines").get("yelmoalcorcon").get("encuentra"))
     return lista
+
+    def informacion (datos,sesion):
+        lista=[]
+        sesion==datos.get("cines").get("cinecallao").get("sesiones"):
+        lista.append(sesion)
+        return lista
