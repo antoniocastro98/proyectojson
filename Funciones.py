@@ -53,8 +53,18 @@ def buscar (datos,nombre):
         lista.append(datos.get("cines").get("yelmoalcorcon").get("encuentra"))
     return lista
 
-    def informacion (datos,sesion):
-        lista=[]
-        sesion==datos.get("cines").get("cinecallao").get("sesiones"):
-        lista.append(sesion)
-        return lista
+def info (datos,sesion):
+    lista=[]
+    if sesion in datos.get("cines").get("cinecallao").get("sesiones"):
+        lista.append(datos.get("cines").get("cinecallao").get("nombre"))
+    if sesion in datos.get("cines").get("cinesaprincipepio").get("sesiones"):
+        lista.append(datos.get("cines").get("cinesaprincipepio").get("nombre"))
+    if sesion in datos.get("cines").get("cinesaparquesur").get("sesiones"):
+        lista.append(datos.get("cines").get("cinesaparquesur").get("nombre"))
+    if sesion in datos.get("cines").get("yelmoalcorcon").get("sesiones"):
+        lista.append(datos.get("cines").get("yelmoalcorcon").get("nombre"))
+    return lista
+
+def libre (datos,horas):
+
+

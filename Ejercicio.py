@@ -1,4 +1,4 @@
-from Funciones import listar, contar, buscar
+from Funciones import listar, contar, buscar, info
 import json
 with open ("archivojson.json") as fichero:
     datos=json.load(fichero)
@@ -49,7 +49,11 @@ while opcion!=0:
             print ("Error, introduce una opción correcta")
             opcion=int(input("Introduce una opción: "))
     if opcion==4:
-        
+        sesion=input("Introduce el nombre de una sesión (de uno a siete en letras): ")
+        for i in info(datos,sesion):
+            print(i)
+        if len(buscar(datos,sesion))==0:
+            print("Error, la sesión no existe")
         opcion=int(input("Introduce una opción: "))
         while opcion<0 or opcion>5:
             print ("Error, introduce una opción correcta")
