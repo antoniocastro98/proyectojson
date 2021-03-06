@@ -38,7 +38,17 @@ def contar (datos):
     return lista
 
 def buscar (datos,nombre):
-    lista2=[]
+    lista=[]
     if nombre==datos.get("cines").get("cinecallao").get("nombre"):
         lista.append(datos.get("cines").get("cinecallao").get("direccion"))
         lista.append(datos.get("cines").get("cinecallao").get("encuentra"))
+    if nombre==datos.get("cines").get("cinesaparquesur").get("nombre"):
+        lista.append(datos.get("cines").get("cinesaparquesur").get("direccion"))
+        lista.append(datos.get("cines").get("cinesaparquesur").get("encuentra"))
+    if nombre==datos.get("cines").get("cinesaprincipepio").get("nombre"):
+        lista.append(datos.get("cines").get("cinesaprincipepio").get("direccion"))
+        lista.append(datos.get("cines").get("cinesaprincipepio").get("encuentra"))
+    if nombre==datos.get("cines").get("yelmoalcorcon").get("nombre"):
+        lista.append(datos.get("cines").get("yelmoalcorcon").get("direccion"))
+        lista.append(datos.get("cines").get("yelmoalcorcon").get("encuentra"))
+    return lista

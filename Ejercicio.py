@@ -42,6 +42,8 @@ while opcion!=0:
         nombre=input("Introduce el nombre del cine: ")
         for i in buscar(datos,nombre):
             print(i)
+        if len(buscar(datos,nombre))==0:
+            print("Error, el cine no aparece")
         opcion=int(input("Introduce una opción: "))
         while opcion<0 or opcion>5:
             print ("Error, introduce una opción correcta")
