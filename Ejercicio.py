@@ -1,4 +1,4 @@
-from Funciones import listar
+from Funciones import listar, contar
 import json
 with open ("archivojson.json") as fichero:
     datos=json.load(fichero)
@@ -31,7 +31,9 @@ while opcion!=0:
             print ("Error, introduce una opción correcta")
             opcion=int(input("Introduce una opción: "))
     if opcion==2:
-       
+        for i in contar(datos):
+            for x in i:
+                print(x)
         opcion=int(input("Introduce una opción: "))
         while opcion<0 or opcion>5:
             print ("Error, introduce una opción correcta")
