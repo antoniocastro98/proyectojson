@@ -36,3 +36,9 @@ def contar (datos):
     lista2.append(o2)
     lista.append(lista2)
     return lista
+
+def buscar (datos,nombre):
+    lista2=[]
+    if nombre==datos.get("cines").get("cinecallao").get("nombre"):
+        lista.append(datos.get("cines").get("cinecallao").get("direccion"))
+        lista.append(datos.get("cines").get("cinecallao").get("encuentra"))
