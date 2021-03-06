@@ -1,5 +1,10 @@
-from lxml import etree
+import json 
+with open ("archivojson.json") as fichero:
+    datos=json.load(fichero)
 
 def listar (datos):
-    nombre=datos.xpath("/tv/channel/@id")
-    return nombre
+    lista=[]
+    for i in datos["cines"]:
+        lista.append(i)
+    return lista
+
