@@ -66,5 +66,21 @@ def info (datos,sesion):
     return lista
 
 def libre (datos,horas):
+    lista=[]
+    if horas==datos.get("sesiones").get("cinco").get("hora"):
+        lista.append(datos.get("sesiones").get("cinco").get("pelicula"))   
+    if horas==datos.get("sesiones").get("cuatro").get("hora"):
+        lista.append(datos.get("sesiones").get("cuatro").get("pelicula"))
+    if horas==datos.get("sesiones").get("tres").get("hora"):
+        lista.append(datos.get("sesiones").get("tres").get("pelicula"))
+    if horas==datos.get("sesiones").get("dos").get("hora"):
+        lista.append(datos.get("sesiones").get("dos").get("pelicula"))
+    if horas==datos.get("sesiones").get("uno").get("hora"):
+        lista.append(datos.get("sesiones").get("uno").get("pelicula"))
+    if horas==datos.get("sesiones").get("seis").get("hora"):
+        lista.append(datos.get("sesiones").get("seis").get("pelicula"))
+    if horas==datos.get("sesiones").get("siete").get("hora"):
+        lista.append(datos.get("sesiones").get("siete").get("pelicula"))
+    return lista
 
 

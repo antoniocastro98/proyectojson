@@ -1,4 +1,4 @@
-from Funciones import listar, contar, buscar, info
+from Funciones import listar, contar, buscar, info, libre
 import json
 with open ("archivojson.json") as fichero:
     datos=json.load(fichero)
@@ -59,12 +59,14 @@ while opcion!=0:
             print ("Error, introduce una opción correcta")
             opcion=int(input("Introduce una opción: "))
     if opcion==5:
-        
+        horas=input("Introduce una hora: ")
+        for i in libre(datos,horas):
+            print(i)
+        if len(libre(datos,horas))==0:
+            print("No se emiten peliculas a esa hora. Las horas a las que se emiten son: 18:50, 17:40, 16:20, 21:00, 22:30, 17:10, 15:00.")
         opcion=int(input("Introduce una opción: "))
         while opcion<0 or opcion>5:
             print ("Error, introduce una opción correcta")
             opcion=int(input("Introduce una opción: "))
-
-
 if opcion==0:
     print("Fin del programa")
